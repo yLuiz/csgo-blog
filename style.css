@@ -300,10 +300,10 @@ footer ul li:nth-child(4):hover a {
   }
 }
 
-@media (min-width: 490px) {
+@media (min-width: 460px) {
   .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     position: fixed;
@@ -337,6 +337,10 @@ footer ul li:nth-child(4):hover a {
 }
 
 @media (max-width: 440px) {
+  .home img {
+    object-position: 60% 50%;
+  }
+
   .menu {
     justify-content: start;
   }
@@ -355,10 +359,6 @@ footer ul li:nth-child(4):hover a {
   .home h1 {
     font-size: 28px;
     line-height: 60px;
-  }
-
-  .home img {
-    object-position: 60% 50%;
   }
 }
 
