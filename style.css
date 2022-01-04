@@ -50,6 +50,11 @@ body {
   list-style: none;
 }
 
+#btn-menu {
+  display: none;
+  height: 30px;
+}
+
 .menu ul li,
 .menu ul li a {
   width: 90px;
@@ -160,7 +165,6 @@ main {
 
 main article {
   width: 90vw;
-  /* background-color: black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,8 +246,20 @@ h2 {
 /* MAIN ASIDE */
 aside {
   background-color: #222831;
-  width: 20vw;
   height: auto;
+}
+
+.container .aside-content {
+  margin: 10px;
+}
+
+.container .aside-content section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.container .aside-content section iframe {
+  border: 5px black double;
 }
 
 /* FOOTER */
@@ -265,7 +281,6 @@ footer {
   justify-content: center;
   align-items: start;
 
-  border: 1px solid black;
   max-width: 380px;
   width: auto;
   height: auto;
@@ -391,6 +406,10 @@ footer ul li:nth-child(4):hover a {
   .home div:nth-of-type(1) {
     width: 60vw;
   }
+
+  .container aside section iframe {
+    height: 240px;
+  }
 }
 
 @media (max-width: 465px) {
@@ -408,10 +427,47 @@ footer ul li:nth-child(4):hover a {
   }
 
   .menu {
-    justify-content: start;
+    justify-content: space-between;
   }
-  .menu ul {
-    display: none;
+  .menu .links {
+    display: block;
+  }
+
+  .links {
+    background-color: var(--nav-color);
+
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 49px;
+    right: 20px;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: 0.45s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .links li {
+    margin: 10px 0;
+  }
+
+  .menu.show .links {
+    display: flex;
+    height: 190px;
+    visibility: visible;
+  }
+
+  .menu #btn-menu {
+    display: block;
+    margin-right: 45px;
+    border: none;
+    background: transparent;
+  }
+
+  .menu.show #btn-menu {
   }
 }
 
@@ -463,9 +519,13 @@ footer ul li:nth-child(4):hover a {
     background-color: var(--nav-color);
   }
 
+  .sub-title {
+    margin: 40px 0;
+  }
+
   .section {
     padding: 0;
-    margin-top: 40px 0;
+    margin-top: 60px 0;
   }
 
   .home h1 {
