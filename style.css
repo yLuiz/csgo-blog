@@ -223,6 +223,12 @@ main article {
   margin: 80px 0;
 }
 
+section:nth-of-type(3) p a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #131313;
+}
+
 .sub-title {
   display: flex;
   flex-direction: row;
