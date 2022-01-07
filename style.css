@@ -50,11 +50,6 @@ body {
   list-style: none;
 }
 
-#btn-menu {
-  display: none;
-  height: 30px;
-}
-
 .menu ul li,
 .menu ul li a {
   width: 90px;
@@ -112,6 +107,10 @@ body {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.7);
   transition: 0.3s;
+}
+
+#btn-menu {
+  display: none;
 }
 
 /* HOME */
@@ -461,13 +460,50 @@ footer ul li:nth-child(4):hover a {
   }
 
   .menu #btn-menu {
-    display: block;
-    margin-right: 45px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 56px;
     border: none;
     background: transparent;
+    padding: 0.5rem;
+    cursor: pointer;
   }
 
-  .menu.show #btn-menu {
+  .menu #hamburger1,
+  .menu #hamburger2,
+  .menu #hamburger3 {
+    position: absolute;
+    border-top: 2px solid rgb(32, 32, 32);
+    width: 20px;
+    transition: 0.3s;
+  }
+
+  .menu #hamburger1 {
+    top: 0;
+  }
+
+  .menu #hamburger2 {
+    top: 7px;
+  }
+
+  .menu #hamburger3 {
+    bottom: 0;
+    transition: 0.05s;
+  }
+
+  .menu.show #hamburger1 {
+    transform: rotate(135deg);
+    top: 7px;
+  }
+
+  .menu.show #hamburger2 {
+    transform: rotate(-135deg);
+  }
+
+  .menu.show #hamburger3 {
+    visibility: hidden;
   }
 }
 
