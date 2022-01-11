@@ -99,13 +99,13 @@ body {
   cursor: pointer;
   width: 45px;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
   transition: 0.2s;
 }
 
 .menu ul li:hover a {
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.7);
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.75);
   transition: 0.3s;
 }
 
@@ -121,6 +121,13 @@ body {
   width: 90vw;
   height: calc(100vh - 30px);
   box-shadow: 0px 0px 20px black;
+
+  background-image: url('assets/image/csgo-wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  user-select: none;
 }
 
 .home div:nth-of-type(1) {
@@ -144,13 +151,6 @@ body {
   font-size: 40px;
   line-height: 80px;
   text-align: start;
-}
-
-.home img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  user-select: none;
 }
 
 /* MAIN */
@@ -427,8 +427,8 @@ footer ul li:nth-child(4):hover a {
 }
 
 @media (max-width: 440px) {
-  .home img {
-    object-position: 60% 50%;
+  .home {
+    background-position: 60% 50%;
   }
 
   .menu {
