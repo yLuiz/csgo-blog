@@ -1,11 +1,11 @@
 const btn_menu = document.getElementById('btn-menu')
+const nav = document.getElementById('nav')
 
 function toggleMenu(event) {
   if (event.type === 'touchstart') {
     event.preventDefault()
   }
 
-  const nav = document.getElementById('nav')
   nav.classList.toggle('show')
 }
 
@@ -17,4 +17,17 @@ window.addEventListener('click', () => {
 
 btn_menu.addEventListener('click', event => {
   event.stopPropagation()
+})
+
+var lastScrollTop = 0
+/* var navbar = document.getElementById('nav') */
+window.addEventListener('scroll', () => {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+  if (scrollTop > lastScrollTop) {
+    nav.style.top = '-60px'
+  } else {
+    nav.style.top = '10px'
+  }
+  lastScrollTop = scrollTop
 })
