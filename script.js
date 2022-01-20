@@ -20,14 +20,17 @@ btn_menu.addEventListener('click', event => {
 })
 
 var lastScrollTop = 0
-/* var navbar = document.getElementById('nav') */
 window.addEventListener('scroll', () => {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
   if (scrollTop > lastScrollTop) {
     nav.style.top = '-60px'
+
+    nav.style.opacity = '0%'
   } else {
     nav.style.top = '10px'
+
+    nav.style.opacity = '100%'
   }
   lastScrollTop = scrollTop
 })
