@@ -19,6 +19,8 @@ btn_menu.addEventListener('click', event => {
   event.stopPropagation()
 })
 
+/* HIDE HEADER SCROLL DOWN */
+
 var lastScrollTop = 0
 window.addEventListener('scroll', () => {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop
